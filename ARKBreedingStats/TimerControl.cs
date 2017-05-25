@@ -29,7 +29,7 @@ namespace ARKBreedingStats
             ControlExtensions.DoubleBuffered(listViewTimer, true);
         }
 
-        public void addTimer(string name, DateTime finishTime, Creature c, string group = "Manual Timers")
+        public void addTimer(string name, DateTime finishTime, Creature c, string group = "手动计时器")
         {
             TimerListEntry tle = new TimerListEntry();
             tle.name = name;
@@ -86,7 +86,7 @@ namespace ARKBreedingStats
                     {
                         diff = t.time.Subtract(now);
                         if (updateTimer)
-                            t.lvi.SubItems[2].Text = (diff.TotalSeconds > 0 ? diff.ToString("d':'hh':'mm':'ss") : "Finished");
+                            t.lvi.SubItems[2].Text = (diff.TotalSeconds > 0 ? diff.ToString("d':'hh':'mm':'ss") : "完成");
                         if (diff.TotalSeconds >= 0)
                         {
                             if (diff.TotalSeconds < 60 && diff.TotalSeconds > 10)
@@ -176,7 +176,7 @@ namespace ARKBreedingStats
 
         private void removeSelectedEntry()
         {
-            if (listViewTimer.SelectedIndices.Count > 0 && MessageBox.Show("Remove the timer \"" + ((TimerListEntry)listViewTimer.SelectedItems[0].Tag).name + "\"?", "Remove Timer?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (listViewTimer.SelectedIndices.Count > 0 && MessageBox.Show("删除计时器 \"" + ((TimerListEntry)listViewTimer.SelectedItems[0].Tag).name + "\"?", "删除计时器?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 removeTimer((TimerListEntry)listViewTimer.SelectedItems[0].Tag);
             }
@@ -243,7 +243,7 @@ namespace ARKBreedingStats
 
         internal void deleteAllExpiredTimers()
         {
-            if (MessageBox.Show("Delete all expired timers?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("删除所有过期的计时器?", "删除?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 for (int i = 0; i < timerListEntries.Count; i++)
                 {
