@@ -97,7 +97,8 @@ namespace ARKBreedingStats
                 {
                     if (t.TribeName == p.Tribe)
                     {
-                        rel = t.TribeRelation.ToString();
+                        // rel = t.TribeRelation.ToString();
+                        rel = GetEnumDescription(t.TribeRelation);
                         break;
                     }
                 }
@@ -323,11 +324,27 @@ namespace ARKBreedingStats
         private void updateTribeRowRelation(ListViewItem tribeRow, Tribe.Relation rel)
         {
             string tribe = tribeRow.SubItems[0].Text;
-            tribeRow.SubItems[1].Text = rel.ToString();
+            tribeRow.SubItems[1].Text = GetEnumDescription(rel);
             Color c = relationColor(rel);
             tribeRow.SubItems[1].BackColor = c;
             updatePlayerList();
         }
+
+        /// <summary>
+        /// 获取枚举类型中的描述信息
+        /// </summary>
+        /// <param name="enumValue"></param>
+        /// <returns></returns>
+        public string GetEnumDescription(Enum enumValue)
+        {
+            string str = enumValue.ToString();
+            System.Reflection.FieldInfo field = enumValue.GetType().GetField(str);
+            object[] objs = field.GetCustomAttributes(typeof(System.ComponentModel.DescriptionAttribute), false);
+            if (objs == null || objs.Length == 0) return str;
+            System.ComponentModel.DescriptionAttribute da = (System.ComponentModel.DescriptionAttribute)objs[0];
+            return da.Description;
+        }
+
 
         private Color relationColor(Tribe.Relation r)
         {
