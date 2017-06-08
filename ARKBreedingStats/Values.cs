@@ -54,7 +54,7 @@ namespace ARKBreedingStats
             // check if file exists
             if (!File.Exists(filename))
             {
-                if (MessageBox.Show("Values-File '" + filename + "' not found. This tool will not work properly without that file.\n\nDo you want to visit the homepage of the tool to redownload it?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                if (MessageBox.Show("找不到 Values-文件 '" + filename + "'. 如果没有该文件, 本工具将无法正常使用.\n\n你可以访问工具官方主页重新下载?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                     System.Diagnostics.Process.Start("https://github.com/cadon/ARKStatsExtractor/releases/latest");
                 return false;
             }
@@ -70,7 +70,7 @@ namespace ARKBreedingStats
             }
             catch (Exception e)
             {
-                MessageBox.Show("File Couldn't be opened or read.\nErrormessage:\n\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("无法打开或读取文件.\n错误信息:\n\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 loadedSuccessful = false;
             }
             file.Close();
@@ -105,7 +105,7 @@ namespace ARKBreedingStats
             // check if file exists
             if (!File.Exists(filename))
             {
-                MessageBox.Show("Additional Values-File '" + filename + "' not found.\nThis collection seems to have modified or added values that are saved in a separate file, which couldn't be found at the saved location. You can load it manually via the menu File - Load additional values...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("找不到附加 Values-文件 '" + filename + "' .\n此集合的值似乎已修改或添加保存在单独文件中, 该文件在存放的位置没有找到. 您可以通过菜单 “文件” - “Load additional values...” 手动加载该文件", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -120,7 +120,7 @@ namespace ARKBreedingStats
             }
             catch (Exception e)
             {
-                MessageBox.Show("File Couldn't be opened or read.\nErrormessage:\n\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("无法打开或读取文件.\n错误信息:\n\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 loadedSuccessful = false;
             }
             file.Close();
@@ -190,7 +190,7 @@ namespace ARKBreedingStats
             // default-multiplier TODO
 
             if (showResults)
-                MessageBox.Show("Species with changed stats: " + speciesUpdated + "\nSpecies added: " + speciesAdded, "Additional Values succesfully added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("物种变化的统计: " + speciesUpdated + "\n添加物种: " + speciesAdded, "成功添加的附加值", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             return true;
         }
