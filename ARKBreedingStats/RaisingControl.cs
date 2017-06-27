@@ -25,8 +25,8 @@ namespace ARKBreedingStats
         public RaisingControl()
         {
             InitializeComponent();
-            listViewBabies.Groups.Add("incubation", "Incubation/Gestation");
-            listViewBabies.Groups.Add("baby", "Babies");
+            listViewBabies.Groups.Add("孵化", "孵化/妊娠");
+            listViewBabies.Groups.Add("婴儿", "婴儿");
             listViewBabies.Groups.Add("growing", "Juveniles / Adolescent");
             updateListView = false;
             ControlExtensions.DoubleBuffered(listViewBabies, true); // prevent flickering
@@ -64,12 +64,12 @@ namespace ARKBreedingStats
 
                         totalTime += babyTime;
                         until = DateTime.Now.Add(totalTime);
-                        times = new string[] { "Baby", babyTime.ToString("d':'hh':'mm':'ss"), totalTime.ToString("d':'hh':'mm':'ss"), Utils.shortTimeDate(until) };
+                        times = new string[] { "婴儿期", babyTime.ToString("d':'hh':'mm':'ss"), totalTime.ToString("d':'hh':'mm':'ss"), Utils.shortTimeDate(until) };
                         listViewRaisingTimes.Items.Add(new ListViewItem(times));
 
                         totalTime = incubationTime + maturationTime;
                         until = DateTime.Now.Add(totalTime);
-                        times = new string[] { "Maturation", maturationTime.ToString("d':'hh':'mm':'ss"), totalTime.ToString("d':'hh':'mm':'ss"), Utils.shortTimeDate(until) };
+                        times = new string[] { "成熟期", maturationTime.ToString("d':'hh':'mm':'ss"), totalTime.ToString("d':'hh':'mm':'ss"), Utils.shortTimeDate(until) };
                         listViewRaisingTimes.Items.Add(new ListViewItem(times));
 
                         // food amount needed
@@ -77,15 +77,15 @@ namespace ARKBreedingStats
                         double babyfood, totalfood;
                         if (uiControls.Trough.foodAmount(speciesIndex, Values.V.babyFoodConsumptionSpeedMultiplier, out babyfood, out totalfood))
                         {
-                            if (Values.V.species[speciesIndex].taming.eats.IndexOf("Raw Meat") >= 0)
+                            if (Values.V.species[speciesIndex].taming.eats.IndexOf("生肉") >= 0)
                             {
-                                foodadmount = "\n\nFood for Baby-Phase: ~" + Math.Ceiling(babyfood / 50) + " Raw Meat"
-                                    + "\nTotal Food for maturation: ~" + Math.Ceiling(totalfood / 50) + " Raw Meat";
+                                foodadmount = "\n\n婴儿期食物: ~" + Math.Ceiling(babyfood / 50) + " 生肉"
+                                    + "\n成熟总食物: ~" + Math.Ceiling(totalfood / 50) + " 生肉";
                             }
                             else if (Values.V.species[speciesIndex].taming.eats.IndexOf("Mejoberry") >= 0)
                             {
-                                foodadmount = "\n\nFood for Baby-Phase: ~" + Math.Ceiling(babyfood / 30) + " Mejoberries"
-                                    + "\nTotal Food for maturation: ~" + Math.Ceiling(totalfood / 30) + " Mejoberries";
+                                foodadmount = "\n\n婴儿期食物: ~" + Math.Ceiling(babyfood / 30) + " Mejoberries"
+                                    + "\n成熟总食物: ~" + Math.Ceiling(totalfood / 30) + " Mejoberries";
                             }
                             foodadmount += "\n - Loss by spoiling is only a rough estimate and may vary.";
                         }
@@ -98,7 +98,7 @@ namespace ARKBreedingStats
                     }
                     else
                     {
-                        labelRaisingInfos.Text = "No raising-data available.";
+                        labelRaisingInfos.Text = "没有提供数据.";
                         groupBox1.Enabled = false;
                     }
 
@@ -157,9 +157,9 @@ namespace ARKBreedingStats
             if (Values.V.species[speciesIndex].taming.eats.IndexOf("Raw Meat") >= 0)
             {
                 if (uiControls.Trough.foodAmountFromUntil(speciesIndex, Values.V.babyFoodConsumptionSpeedMultiplier, maturation, 0.1, out foodAmount))
-                    foodAmountBabyString = Math.Ceiling(foodAmount / 50) + " Raw Meat";
+                    foodAmountBabyString = Math.Ceiling(foodAmount / 50) + " 生肉";
                 if (uiControls.Trough.foodAmountFromUntil(speciesIndex, Values.V.babyFoodConsumptionSpeedMultiplier, maturation, 1, out foodAmount))
-                    foodAmountAdultString = Math.Ceiling(foodAmount / 50) + " Raw Meat";
+                    foodAmountAdultString = Math.Ceiling(foodAmount / 50) + " 生肉";
             }
             else if (Values.V.species[speciesIndex].taming.eats.IndexOf("Mejoberry") >= 0)
             {

@@ -83,7 +83,7 @@
             // columnHeaderFinishedAt
             // 
             this.columnHeaderFinishedAt.Text = "完成于";
-            this.columnHeaderFinishedAt.Width = 116;
+            this.columnHeaderFinishedAt.Width = 135;
             // 
             // columnHeaderTimeLeft
             // 

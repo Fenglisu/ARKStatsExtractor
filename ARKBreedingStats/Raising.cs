@@ -27,9 +27,9 @@ namespace ARKBreedingStats
             nextMatingMin = new TimeSpan(0, 0, (int)(breeding.matingCooldownMinAdjusted));
             nextMatingMax = new TimeSpan(0, 0, (int)(breeding.matingCooldownMaxAdjusted));
 
-            incubationMode = "Gestation";
+            incubationMode = "妊娠";
             if (breeding.gestationTimeAdjusted == 0)
-                incubationMode = "Incubation";
+                incubationMode = "孵化";
 
             incubation = new TimeSpan(0, 0, (int)(breeding.incubationTimeAdjusted + breeding.gestationTimeAdjusted));
             baby = new TimeSpan(0, 0, (int)(.1f * breeding.maturationTimeAdjusted));
@@ -42,7 +42,7 @@ namespace ARKBreedingStats
             if (speciesIndex >= 0 && speciesIndex < Values.V.species.Count && Values.V.species[speciesIndex].breeding != null && Values.V.species[speciesIndex].breeding.eggTempMin > 0)
             {
                 BreedingData breeding = Values.V.species[speciesIndex].breeding;
-                return "Egg-Temperature: "
+                return "蛋-孵化温度: "
                     + (Values.V.celsius ? breeding.eggTempMin : Math.Round(breeding.eggTempMin * 1.8 + 32, 1)) + " - "
                     + (Values.V.celsius ? breeding.eggTempMax : Math.Round(breeding.eggTempMax * 1.8 + 32, 1))
                     + (Values.V.celsius ? " °C" : " °F");

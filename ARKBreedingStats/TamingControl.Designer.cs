@@ -79,9 +79,9 @@
             // labelResult
             // 
             this.labelResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelResult.Location = new System.Drawing.Point(3, 16);
+            this.labelResult.Location = new System.Drawing.Point(3, 17);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(340, 309);
+            this.labelResult.Size = new System.Drawing.Size(340, 283);
             this.labelResult.TabIndex = 6;
             this.labelResult.Text = "Results";
             // 
@@ -99,7 +99,7 @@
             0,
             0});
             this.nudLevel.Name = "nudLevel";
-            this.nudLevel.Size = new System.Drawing.Size(56, 20);
+            this.nudLevel.Size = new System.Drawing.Size(56, 21);
             this.nudLevel.TabIndex = 2;
             this.nudLevel.Value = new decimal(new int[] {
             30,
@@ -114,27 +114,27 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Level";
+            this.label1.Text = "等级";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 63);
+            this.label2.Location = new System.Drawing.Point(131, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 2;
-            this.label2.Text = "max";
+            this.label2.Text = "最大";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(194, 63);
+            this.label3.Location = new System.Drawing.Point(194, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 3;
-            this.label3.Text = "used";
+            this.label3.Text = "使用";
             // 
             // groupBox9
             // 
@@ -144,16 +144,16 @@
             this.groupBox9.Controls.Add(this.numericUpDownCurrentTorpor);
             this.groupBox9.Location = new System.Drawing.Point(339, 3);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(170, 94);
+            this.groupBox9.Size = new System.Drawing.Size(170, 87);
             this.groupBox9.TabIndex = 5;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Torpor-Time";
+            this.groupBox9.Text = "眩晕-时间";
             // 
             // buttonAddTorporTimer
             // 
-            this.buttonAddTorporTimer.Location = new System.Drawing.Point(6, 65);
+            this.buttonAddTorporTimer.Location = new System.Drawing.Point(6, 60);
             this.buttonAddTorporTimer.Name = "buttonAddTorporTimer";
-            this.buttonAddTorporTimer.Size = new System.Drawing.Size(158, 23);
+            this.buttonAddTorporTimer.Size = new System.Drawing.Size(158, 21);
             this.buttonAddTorporTimer.TabIndex = 3;
             this.buttonAddTorporTimer.Text = "add Wake-up-Timer";
             this.buttonAddTorporTimer.UseVisualStyleBackColor = true;
@@ -162,20 +162,20 @@
             // labelTimeUntilWakingUp
             // 
             this.labelTimeUntilWakingUp.AutoSize = true;
-            this.labelTimeUntilWakingUp.Location = new System.Drawing.Point(6, 37);
+            this.labelTimeUntilWakingUp.Location = new System.Drawing.Point(6, 34);
             this.labelTimeUntilWakingUp.Name = "labelTimeUntilWakingUp";
-            this.labelTimeUntilWakingUp.Size = new System.Drawing.Size(99, 13);
+            this.labelTimeUntilWakingUp.Size = new System.Drawing.Size(119, 12);
             this.labelTimeUntilWakingUp.TabIndex = 2;
             this.labelTimeUntilWakingUp.Text = "Time until wake-up:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 16);
+            this.label9.Location = new System.Drawing.Point(6, 17);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Current Torpor";
+            this.label9.Text = "当前眩晕：";
             // 
             // numericUpDownCurrentTorpor
             // 
@@ -185,30 +185,30 @@
             0,
             0,
             0});
-            this.numericUpDownCurrentTorpor.Location = new System.Drawing.Point(87, 14);
+            this.numericUpDownCurrentTorpor.Location = new System.Drawing.Point(87, 13);
             this.numericUpDownCurrentTorpor.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericUpDownCurrentTorpor.Name = "numericUpDownCurrentTorpor";
-            this.numericUpDownCurrentTorpor.Size = new System.Drawing.Size(77, 20);
+            this.numericUpDownCurrentTorpor.Size = new System.Drawing.Size(77, 21);
             this.numericUpDownCurrentTorpor.TabIndex = 0;
             this.numericUpDownCurrentTorpor.ValueChanged += new System.EventHandler(this.numericUpDownCurrentTorpor_ValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(239, 63);
+            this.label4.Location = new System.Drawing.Point(239, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 4;
-            this.label4.Text = "taming time";
+            this.label4.Text = "驯服时间";
             // 
             // nudWDmLongneck
             // 
             this.nudWDmLongneck.DecimalPlaces = 1;
-            this.nudWDmLongneck.Location = new System.Drawing.Point(147, 45);
+            this.nudWDmLongneck.Location = new System.Drawing.Point(147, 42);
             this.nudWDmLongneck.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -220,7 +220,7 @@
             0,
             0});
             this.nudWDmLongneck.Name = "nudWDmLongneck";
-            this.nudWDmLongneck.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmLongneck.Size = new System.Drawing.Size(53, 21);
             this.nudWDmLongneck.TabIndex = 3;
             this.nudWDmLongneck.Value = new decimal(new int[] {
             100,
@@ -245,7 +245,7 @@
             this.groupBox1.Controls.Add(this.nudWDmLongneck);
             this.groupBox1.Location = new System.Drawing.Point(691, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(206, 175);
+            this.groupBox1.Size = new System.Drawing.Size(206, 162);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Weapon-Damage [%]";
@@ -253,7 +253,7 @@
             // nudWDmProd
             // 
             this.nudWDmProd.DecimalPlaces = 1;
-            this.nudWDmProd.Location = new System.Drawing.Point(147, 19);
+            this.nudWDmProd.Location = new System.Drawing.Point(147, 18);
             this.nudWDmProd.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -265,7 +265,7 @@
             0,
             0});
             this.nudWDmProd.Name = "nudWDmProd";
-            this.nudWDmProd.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmProd.Size = new System.Drawing.Size(53, 21);
             this.nudWDmProd.TabIndex = 1;
             this.nudWDmProd.Value = new decimal(new int[] {
             100,
@@ -279,9 +279,9 @@
             this.chkbDmCrossbow.AutoSize = true;
             this.chkbDmCrossbow.Checked = true;
             this.chkbDmCrossbow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkbDmCrossbow.Location = new System.Drawing.Point(6, 72);
+            this.chkbDmCrossbow.Location = new System.Drawing.Point(6, 66);
             this.chkbDmCrossbow.Name = "chkbDmCrossbow";
-            this.chkbDmCrossbow.Size = new System.Drawing.Size(72, 17);
+            this.chkbDmCrossbow.Size = new System.Drawing.Size(72, 16);
             this.chkbDmCrossbow.TabIndex = 4;
             this.chkbDmCrossbow.Text = "Crossbow";
             this.chkbDmCrossbow.UseVisualStyleBackColor = true;
@@ -290,9 +290,9 @@
             // chkbDmBow
             // 
             this.chkbDmBow.AutoSize = true;
-            this.chkbDmBow.Location = new System.Drawing.Point(6, 98);
+            this.chkbDmBow.Location = new System.Drawing.Point(6, 90);
             this.chkbDmBow.Name = "chkbDmBow";
-            this.chkbDmBow.Size = new System.Drawing.Size(47, 17);
+            this.chkbDmBow.Size = new System.Drawing.Size(42, 16);
             this.chkbDmBow.TabIndex = 6;
             this.chkbDmBow.Text = "Bow";
             this.chkbDmBow.UseVisualStyleBackColor = true;
@@ -301,9 +301,9 @@
             // chkbDmSlingshot
             // 
             this.chkbDmSlingshot.AutoSize = true;
-            this.chkbDmSlingshot.Location = new System.Drawing.Point(6, 124);
+            this.chkbDmSlingshot.Location = new System.Drawing.Point(6, 114);
             this.chkbDmSlingshot.Name = "chkbDmSlingshot";
-            this.chkbDmSlingshot.Size = new System.Drawing.Size(69, 17);
+            this.chkbDmSlingshot.Size = new System.Drawing.Size(78, 16);
             this.chkbDmSlingshot.TabIndex = 8;
             this.chkbDmSlingshot.Text = "Slingshot";
             this.chkbDmSlingshot.UseVisualStyleBackColor = true;
@@ -312,9 +312,9 @@
             // chkbDmClub
             // 
             this.chkbDmClub.AutoSize = true;
-            this.chkbDmClub.Location = new System.Drawing.Point(6, 150);
+            this.chkbDmClub.Location = new System.Drawing.Point(6, 138);
             this.chkbDmClub.Name = "chkbDmClub";
-            this.chkbDmClub.Size = new System.Drawing.Size(47, 17);
+            this.chkbDmClub.Size = new System.Drawing.Size(48, 16);
             this.chkbDmClub.TabIndex = 10;
             this.chkbDmClub.Text = "Club";
             this.chkbDmClub.UseVisualStyleBackColor = true;
@@ -325,9 +325,9 @@
             this.chkbDmLongneck.AutoSize = true;
             this.chkbDmLongneck.Checked = true;
             this.chkbDmLongneck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkbDmLongneck.Location = new System.Drawing.Point(6, 46);
+            this.chkbDmLongneck.Location = new System.Drawing.Point(6, 42);
             this.chkbDmLongneck.Name = "chkbDmLongneck";
-            this.chkbDmLongneck.Size = new System.Drawing.Size(74, 17);
+            this.chkbDmLongneck.Size = new System.Drawing.Size(72, 16);
             this.chkbDmLongneck.TabIndex = 2;
             this.chkbDmLongneck.Text = "Longneck";
             this.chkbDmLongneck.UseVisualStyleBackColor = true;
@@ -336,7 +336,7 @@
             // nudWDmSlingshot
             // 
             this.nudWDmSlingshot.DecimalPlaces = 1;
-            this.nudWDmSlingshot.Location = new System.Drawing.Point(147, 123);
+            this.nudWDmSlingshot.Location = new System.Drawing.Point(147, 114);
             this.nudWDmSlingshot.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -348,7 +348,7 @@
             0,
             0});
             this.nudWDmSlingshot.Name = "nudWDmSlingshot";
-            this.nudWDmSlingshot.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmSlingshot.Size = new System.Drawing.Size(53, 21);
             this.nudWDmSlingshot.TabIndex = 9;
             this.nudWDmSlingshot.Value = new decimal(new int[] {
             100,
@@ -360,9 +360,9 @@
             // chkbDmProd
             // 
             this.chkbDmProd.AutoSize = true;
-            this.chkbDmProd.Location = new System.Drawing.Point(6, 20);
+            this.chkbDmProd.Location = new System.Drawing.Point(6, 18);
             this.chkbDmProd.Name = "chkbDmProd";
-            this.chkbDmProd.Size = new System.Drawing.Size(86, 17);
+            this.chkbDmProd.Size = new System.Drawing.Size(102, 16);
             this.chkbDmProd.TabIndex = 0;
             this.chkbDmProd.Text = "Electric Prod";
             this.chkbDmProd.UseVisualStyleBackColor = true;
@@ -371,7 +371,7 @@
             // nudWDmClub
             // 
             this.nudWDmClub.DecimalPlaces = 1;
-            this.nudWDmClub.Location = new System.Drawing.Point(147, 149);
+            this.nudWDmClub.Location = new System.Drawing.Point(147, 138);
             this.nudWDmClub.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -383,7 +383,7 @@
             0,
             0});
             this.nudWDmClub.Name = "nudWDmClub";
-            this.nudWDmClub.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmClub.Size = new System.Drawing.Size(53, 21);
             this.nudWDmClub.TabIndex = 11;
             this.nudWDmClub.Value = new decimal(new int[] {
             100,
@@ -395,7 +395,7 @@
             // nudWDmBow
             // 
             this.nudWDmBow.DecimalPlaces = 1;
-            this.nudWDmBow.Location = new System.Drawing.Point(147, 97);
+            this.nudWDmBow.Location = new System.Drawing.Point(147, 90);
             this.nudWDmBow.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -407,7 +407,7 @@
             0,
             0});
             this.nudWDmBow.Name = "nudWDmBow";
-            this.nudWDmBow.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmBow.Size = new System.Drawing.Size(53, 21);
             this.nudWDmBow.TabIndex = 7;
             this.nudWDmBow.Value = new decimal(new int[] {
             100,
@@ -419,7 +419,7 @@
             // nudWDmCrossbow
             // 
             this.nudWDmCrossbow.DecimalPlaces = 1;
-            this.nudWDmCrossbow.Location = new System.Drawing.Point(147, 71);
+            this.nudWDmCrossbow.Location = new System.Drawing.Point(147, 66);
             this.nudWDmCrossbow.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -431,7 +431,7 @@
             0,
             0});
             this.nudWDmCrossbow.Name = "nudWDmCrossbow";
-            this.nudWDmCrossbow.Size = new System.Drawing.Size(53, 20);
+            this.nudWDmCrossbow.Size = new System.Drawing.Size(53, 21);
             this.nudWDmCrossbow.TabIndex = 5;
             this.nudWDmCrossbow.Value = new decimal(new int[] {
             100,
@@ -443,9 +443,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.labelKOCount);
-            this.groupBox2.Location = new System.Drawing.Point(691, 184);
+            this.groupBox2.Location = new System.Drawing.Point(691, 170);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(206, 246);
+            this.groupBox2.Size = new System.Drawing.Size(206, 227);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "KO-Counting";
@@ -453,18 +453,18 @@
             // labelKOCount
             // 
             this.labelKOCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelKOCount.Location = new System.Drawing.Point(3, 16);
+            this.labelKOCount.Location = new System.Drawing.Point(3, 17);
             this.labelKOCount.Name = "labelKOCount";
-            this.labelKOCount.Size = new System.Drawing.Size(200, 227);
+            this.labelKOCount.Size = new System.Drawing.Size(200, 207);
             this.labelKOCount.TabIndex = 0;
             this.labelKOCount.Text = "KO";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.labelResult);
-            this.groupBox3.Location = new System.Drawing.Point(339, 152);
+            this.groupBox3.Location = new System.Drawing.Point(339, 140);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(346, 328);
+            this.groupBox3.Size = new System.Drawing.Size(346, 303);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Taming-Information";
@@ -477,16 +477,16 @@
             this.groupBox4.Controls.Add(this.nudCurrentFood);
             this.groupBox4.Location = new System.Drawing.Point(515, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(170, 94);
+            this.groupBox4.Size = new System.Drawing.Size(170, 87);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Starving-Time";
             // 
             // btnAddStarvingTimer
             // 
-            this.btnAddStarvingTimer.Location = new System.Drawing.Point(6, 65);
+            this.btnAddStarvingTimer.Location = new System.Drawing.Point(6, 60);
             this.btnAddStarvingTimer.Name = "btnAddStarvingTimer";
-            this.btnAddStarvingTimer.Size = new System.Drawing.Size(158, 23);
+            this.btnAddStarvingTimer.Size = new System.Drawing.Size(158, 21);
             this.btnAddStarvingTimer.TabIndex = 3;
             this.btnAddStarvingTimer.Text = "add Starving-Timer";
             this.btnAddStarvingTimer.UseVisualStyleBackColor = true;
@@ -495,18 +495,18 @@
             // lblTimeUntilStarving
             // 
             this.lblTimeUntilStarving.AutoSize = true;
-            this.lblTimeUntilStarving.Location = new System.Drawing.Point(6, 37);
+            this.lblTimeUntilStarving.Location = new System.Drawing.Point(6, 34);
             this.lblTimeUntilStarving.Name = "lblTimeUntilStarving";
-            this.lblTimeUntilStarving.Size = new System.Drawing.Size(95, 13);
+            this.lblTimeUntilStarving.Size = new System.Drawing.Size(125, 12);
             this.lblTimeUntilStarving.TabIndex = 2;
             this.lblTimeUntilStarving.Text = "Time until starving:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 16);
+            this.label6.Location = new System.Drawing.Point(6, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.Size = new System.Drawing.Size(77, 12);
             this.label6.TabIndex = 1;
             this.label6.Text = "Current Food";
             // 
@@ -518,20 +518,20 @@
             0,
             0,
             0});
-            this.nudCurrentFood.Location = new System.Drawing.Point(87, 14);
+            this.nudCurrentFood.Location = new System.Drawing.Point(87, 13);
             this.nudCurrentFood.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.nudCurrentFood.Name = "nudCurrentFood";
-            this.nudCurrentFood.Size = new System.Drawing.Size(77, 20);
+            this.nudCurrentFood.Size = new System.Drawing.Size(77, 21);
             this.nudCurrentFood.TabIndex = 0;
             this.nudCurrentFood.ValueChanged += new System.EventHandler(this.nudCurrentFood_ValueChanged);
             // 
             // TamingControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.groupBox4);
@@ -545,7 +545,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudLevel);
             this.Name = "TamingControl";
-            this.Size = new System.Drawing.Size(933, 520);
+            this.Size = new System.Drawing.Size(933, 480);
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
