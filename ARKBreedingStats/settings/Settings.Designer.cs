@@ -120,6 +120,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.cbAdjustToPossibleImprinting = new System.Windows.Forms.CheckBox();
             this.nudWildLevelStep = new ARKBreedingStats.uiControls.Nud();
             this.cbConsiderWildLevelSteps = new System.Windows.Forms.CheckBox();
             this.buttonEventToDefault = new System.Windows.Forms.Button();
@@ -529,7 +530,7 @@
             this.groupBox2.Controls.Add(this.numericUpDownImprintingM);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.numericUpDownHatching);
-            this.groupBox2.Location = new System.Drawing.Point(333, 242);
+            this.groupBox2.Location = new System.Drawing.Point(333, 216);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(309, 177);
             this.groupBox2.TabIndex = 4;
@@ -541,7 +542,7 @@
             this.nudBabyFoodConsumptionEvent.DecimalPlaces = 3;
             this.nudBabyFoodConsumptionEvent.Location = new System.Drawing.Point(246, 149);
             this.nudBabyFoodConsumptionEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -559,7 +560,7 @@
             this.nudMatingIntervalEvent.DecimalPlaces = 3;
             this.nudMatingIntervalEvent.Location = new System.Drawing.Point(246, 19);
             this.nudMatingIntervalEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -577,7 +578,7 @@
             this.nudCuddleIntervalEvent.DecimalPlaces = 3;
             this.nudCuddleIntervalEvent.Location = new System.Drawing.Point(246, 97);
             this.nudCuddleIntervalEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -595,7 +596,7 @@
             this.nudMaturationSpeedEvent.DecimalPlaces = 3;
             this.nudMaturationSpeedEvent.Location = new System.Drawing.Point(246, 71);
             this.nudMaturationSpeedEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -613,7 +614,7 @@
             this.nudHatchingSpeedEvent.DecimalPlaces = 3;
             this.nudHatchingSpeedEvent.Location = new System.Drawing.Point(246, 45);
             this.nudHatchingSpeedEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -640,7 +641,7 @@
             this.nudBabyFoodConsumptionSpeed.DecimalPlaces = 3;
             this.nudBabyFoodConsumptionSpeed.Location = new System.Drawing.Point(183, 149);
             this.nudBabyFoodConsumptionSpeed.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -667,7 +668,7 @@
             this.nudMatingInterval.DecimalPlaces = 3;
             this.nudMatingInterval.Location = new System.Drawing.Point(183, 19);
             this.nudMatingInterval.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -694,7 +695,7 @@
             this.numericUpDownBabyCuddleIntervalMultiplier.DecimalPlaces = 3;
             this.numericUpDownBabyCuddleIntervalMultiplier.Location = new System.Drawing.Point(183, 97);
             this.numericUpDownBabyCuddleIntervalMultiplier.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -730,7 +731,7 @@
             this.numericUpDownMaturation.DecimalPlaces = 3;
             this.numericUpDownMaturation.Location = new System.Drawing.Point(183, 71);
             this.numericUpDownMaturation.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -748,7 +749,7 @@
             this.numericUpDownImprintingM.DecimalPlaces = 3;
             this.numericUpDownImprintingM.Location = new System.Drawing.Point(183, 123);
             this.numericUpDownImprintingM.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -775,7 +776,7 @@
             this.numericUpDownHatching.DecimalPlaces = 3;
             this.numericUpDownHatching.Location = new System.Drawing.Point(183, 45);
             this.numericUpDownHatching.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -799,7 +800,7 @@
             this.groupBox3.Location = new System.Drawing.Point(333, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(246, 100);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Maximal Levels on Server";
             // 
@@ -807,7 +808,7 @@
             // 
             this.numericUpDownMaxChartLevel.Location = new System.Drawing.Point(183, 71);
             this.numericUpDownMaxChartLevel.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -837,7 +838,7 @@
             // 
             this.numericUpDownMaxWildLevel.Location = new System.Drawing.Point(183, 19);
             this.numericUpDownMaxWildLevel.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -858,7 +859,7 @@
             // 
             this.numericUpDownDomLevelNr.Location = new System.Drawing.Point(183, 45);
             this.numericUpDownDomLevelNr.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -940,7 +941,7 @@
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.numericUpDownTamingFoodRate);
             this.groupBox5.Controls.Add(this.numericUpDownTamingSpeed);
-            this.groupBox5.Location = new System.Drawing.Point(333, 164);
+            this.groupBox5.Location = new System.Drawing.Point(333, 138);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(309, 72);
             this.groupBox5.TabIndex = 3;
@@ -952,7 +953,7 @@
             this.nudTamingFoodRateEvent.DecimalPlaces = 3;
             this.nudTamingFoodRateEvent.Location = new System.Drawing.Point(246, 45);
             this.nudTamingFoodRateEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -970,7 +971,7 @@
             this.nudTamingSpeedEvent.DecimalPlaces = 3;
             this.nudTamingSpeedEvent.Location = new System.Drawing.Point(246, 19);
             this.nudTamingSpeedEvent.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1006,7 +1007,7 @@
             this.numericUpDownTamingFoodRate.DecimalPlaces = 3;
             this.numericUpDownTamingFoodRate.Location = new System.Drawing.Point(183, 45);
             this.numericUpDownTamingFoodRate.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1024,7 +1025,7 @@
             this.numericUpDownTamingSpeed.DecimalPlaces = 3;
             this.numericUpDownTamingSpeed.Location = new System.Drawing.Point(183, 19);
             this.numericUpDownTamingSpeed.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -1219,7 +1220,7 @@
             this.customSCWakeup.Location = new System.Drawing.Point(6, 81);
             this.customSCWakeup.Name = "customSCWakeup";
             this.customSCWakeup.Size = new System.Drawing.Size(401, 23);
-            this.customSCWakeup.SoundFile = "";
+            this.customSCWakeup.SoundFile = null;
             this.customSCWakeup.TabIndex = 6;
             // 
             // customSCBirth
@@ -1227,7 +1228,7 @@
             this.customSCBirth.Location = new System.Drawing.Point(6, 110);
             this.customSCBirth.Name = "customSCBirth";
             this.customSCBirth.Size = new System.Drawing.Size(401, 23);
-            this.customSCBirth.SoundFile = "";
+            this.customSCBirth.SoundFile = null;
             this.customSCBirth.TabIndex = 5;
             // 
             // customSCStarving
@@ -1235,7 +1236,7 @@
             this.customSCStarving.Location = new System.Drawing.Point(6, 52);
             this.customSCStarving.Name = "customSCStarving";
             this.customSCStarving.Size = new System.Drawing.Size(401, 23);
-            this.customSCStarving.SoundFile = null;
+            this.customSCStarving.SoundFile = "";
             this.customSCStarving.TabIndex = 4;
             // 
             // label20
@@ -1271,20 +1272,31 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.cbAdjustToPossibleImprinting);
             this.groupBox11.Controls.Add(this.nudWildLevelStep);
             this.groupBox11.Controls.Add(this.cbConsiderWildLevelSteps);
-            this.groupBox11.Location = new System.Drawing.Point(333, 112);
+            this.groupBox11.Location = new System.Drawing.Point(6, 387);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(246, 46);
-            this.groupBox11.TabIndex = 2;
+            this.groupBox11.Size = new System.Drawing.Size(321, 74);
+            this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Extractor";
             // 
+            // cbAdjustToPossibleImprinting
+            // 
+            this.cbAdjustToPossibleImprinting.AutoSize = true;
+            this.cbAdjustToPossibleImprinting.Location = new System.Drawing.Point(6, 44);
+            this.cbAdjustToPossibleImprinting.Name = "cbAdjustToPossibleImprinting";
+            this.cbAdjustToPossibleImprinting.Size = new System.Drawing.Size(156, 17);
+            this.cbAdjustToPossibleImprinting.TabIndex = 2;
+            this.cbAdjustToPossibleImprinting.Text = "Adjust to possible Imprinting";
+            this.cbAdjustToPossibleImprinting.UseVisualStyleBackColor = true;
+            // 
             // nudWildLevelStep
             // 
-            this.nudWildLevelStep.Location = new System.Drawing.Point(183, 18);
+            this.nudWildLevelStep.Location = new System.Drawing.Point(258, 17);
             this.nudWildLevelStep.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -1314,7 +1326,7 @@
             // 
             // buttonEventToDefault
             // 
-            this.buttonEventToDefault.Location = new System.Drawing.Point(506, 425);
+            this.buttonEventToDefault.Location = new System.Drawing.Point(506, 399);
             this.buttonEventToDefault.Name = "buttonEventToDefault";
             this.buttonEventToDefault.Size = new System.Drawing.Size(136, 23);
             this.buttonEventToDefault.TabIndex = 6;
@@ -1324,7 +1336,7 @@
             // 
             // buttonAllTBMultipliersOne
             // 
-            this.buttonAllTBMultipliersOne.Location = new System.Drawing.Point(333, 425);
+            this.buttonAllTBMultipliersOne.Location = new System.Drawing.Point(333, 399);
             this.buttonAllTBMultipliersOne.Name = "buttonAllTBMultipliersOne";
             this.buttonAllTBMultipliersOne.Size = new System.Drawing.Size(167, 23);
             this.buttonAllTBMultipliersOne.TabIndex = 5;
@@ -1335,7 +1347,7 @@
             // labelEvent
             // 
             this.labelEvent.AutoSize = true;
-            this.labelEvent.Location = new System.Drawing.Point(593, 148);
+            this.labelEvent.Location = new System.Drawing.Point(593, 122);
             this.labelEvent.Name = "labelEvent";
             this.labelEvent.Size = new System.Drawing.Size(78, 13);
             this.labelEvent.TabIndex = 9;
@@ -1509,5 +1521,6 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private uiControls.Nud nudWildLevelStep;
         private System.Windows.Forms.CheckBox cbConsiderWildLevelSteps;
+        private System.Windows.Forms.CheckBox cbAdjustToPossibleImprinting;
     }
 }

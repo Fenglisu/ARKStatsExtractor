@@ -302,6 +302,7 @@ namespace ARKBreedingStats
 
             radarChart1.initializeVariables(creatureCollection.maxChartLevel);
             radarChartExtractor.initializeVariables(creatureCollection.maxChartLevel);
+            radarChartLibrary.initializeVariables(creatureCollection.maxChartLevel);
 
             // check for updates
             DateTime lastUpdateCheck = Properties.Settings.Default.lastUpdateCheck;
@@ -431,7 +432,7 @@ namespace ARKBreedingStats
                 (double)numericUpDownLowerTEffBound.Value / 100, (double)numericUpDownUpperTEffBound.Value / 100,
                 !radioButtonBred.Checked, radioButtonTamed.Checked, checkBoxJustTamed.Checked, radioButtonBred.Checked,
                 (double)numericUpDownImprintingBonusExtractor.Value / 100, creatureCollection.imprintingMultiplier, babyCuddleIntervalMultiplier,
-                creatureCollection.considerWildLevelSteps, creatureCollection.wildLevelStep, out imprintingBonusChanged);
+                creatureCollection.considerWildLevelSteps, creatureCollection.wildLevelStep, creatureCollection.adjustToPossibleImprinting, out imprintingBonusChanged);
 
             if (radioButtonTamed.Checked)
                 checkBoxJustTamed.Checked = extractor.justTamed;
@@ -913,11 +914,12 @@ namespace ARKBreedingStats
         {
             /*
              * wild speed level is wildTotalLevels - determinedWildLevels. sometimes the oxygenlevel cannot be determined
-             * if TE cannot be determined, speed cannot as well
+             * if TE cannot be determined and creature is just tamed (so torpor-bug applies), speed cannot as well
              */
             bool unique = true;
+            bool uniqueWildTorporLevel = extractor.lastTEUnique || !extractor.justTamed;
             int notDeterminedLevels = statIOs[7].LevelWild;
-            if (extractor.lastTEUnique)
+            if (uniqueWildTorporLevel)
             {
                 for (int s = 0; s < 6; s++)
                 {
@@ -929,7 +931,7 @@ namespace ARKBreedingStats
                     else { unique = false; break; }
                 }
             }
-            if (unique && extractor.lastTEUnique)
+            if (unique && uniqueWildTorporLevel)
             {
                 // if all other stats are unique, set speedlevel
                 statIOs[6].LevelWild = Math.Max(0, notDeterminedLevels);
@@ -1139,6 +1141,7 @@ namespace ARKBreedingStats
             breedingPlan1.maxWildLevels = creatureCollection.maxWildLevel;
             radarChart1.initializeVariables(creatureCollection.maxChartLevel);
             radarChartExtractor.initializeVariables(creatureCollection.maxChartLevel);
+            radarChartLibrary.initializeVariables(creatureCollection.maxChartLevel);
             statPotentials1.levelDomMax = creatureCollection.maxDomLevel;
             statPotentials1.levelGraphMax = creatureCollection.maxChartLevel;
 
@@ -1851,6 +1854,8 @@ namespace ARKBreedingStats
             {
                 Creature c = (Creature)listViewLibrary.SelectedItems[0].Tag;
                 creatureBoxListView.setCreature(c);
+                if (tabControlLibFilter.SelectedTab == tabPageLibRadarChart)
+                    radarChartLibrary.setLevels(c.levelsWild);
                 pedigreeNeedsUpdate = true;
             }
         }
@@ -3636,6 +3641,9 @@ namespace ARKBreedingStats
 
         private void loadAdditionalValuesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Additional files have to be located in the exact same folder as the library-file is located.\n"
+                + "You may load it from somewhere else, but after reloading the library it will not work if it's not placed in the same folder.\n\n"
+                + "(this is to ensure functionality if the library is used by multiple users via a cloud-service.)", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "Additional values-file (*.json)|*.json";
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -3660,7 +3668,7 @@ namespace ARKBreedingStats
                 + ", unavailable: " + creatureCollection.creatures.Count(c => c.status == CreatureStatus.Unavailable).ToString()
                 + ")" : "")
                 + ". v" + Application.ProductVersion + " / values: " + Values.V.version.ToString() +
-                   (creatureCollection.additionalValues.Length > 0 ? ", additional values from " + creatureCollection.additionalValues + " v" + Values.V.modVersion : "");
+                   (creatureCollection.additionalValues.Length > 0 && Values.V.modVersion != null && Values.V.modVersion.ToString().Length > 0 ? ", additional values from " + creatureCollection.additionalValues + " v" + Values.V.modVersion : "");
         }
 
         private void toolStripButtonAddNote_Click(object sender, EventArgs e)
@@ -3732,8 +3740,17 @@ namespace ARKBreedingStats
         {
             foreach (Creature c in cc.creatures)
             {
-                if (c.species == "Wooly Rhino")
-                    c.species = "Woolly Rhino";
+                c.species = c.species.Trim();
+                switch (c.species)
+                {
+                    case "Wooly Rhino": c.species = "Woolly Rhino"; break;
+                    case "Pachy": c.species = "Pachycephalosaurus"; break;
+                    case "Quetzal": c.species = "Quetzalcoatl"; break;
+                    case "Sarco": c.species = "Sarcosuchus"; break;
+                    case "Therizinosaurus": c.species = "Therizinosaur"; break;
+                    case "Rex": c.species = "Tyrannosaurus"; break;
+                    case "Compy": c.species = "Compsognathus"; break;
+                }
             }
         }
     }
